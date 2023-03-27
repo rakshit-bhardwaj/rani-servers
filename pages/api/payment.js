@@ -4,13 +4,13 @@ import { getFirestore,collection, addDoc } from 'firebase/firestore';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAdB3oYEYPGwvjjaECaMVbNJWs6WGpvPYE",
-  authDomain: "rani-servers.firebaseapp.com",
-  projectId: "rani-servers",
-  storageBucket: "rani-servers.appspot.com",
-  messagingSenderId: "937118940101",
-  appId: "1:937118940101:web:51b9191c3f7247e73f29ac",
-  measurementId: "G-BG8X076EJM"
+  apiKey: "api key",
+  authDomain: "auth domain",
+  projectId: "projectId",
+  storageBucket: "storage bucket",
+  messagingSenderId: "messagesendid",
+  appId: "appid",
+  measurementId: "measurement id"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -1,0 +1,50 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url(../public/wallpaper\ \(1\).png);
+  background-attachment:fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #0c0f12;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .midsection {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px){
+  .flexchange{
+    flex-direction: column;
+  }
+  .serverlabel,.serverconnect {
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+  
+}

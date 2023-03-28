@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.STRIPE_TEST_SK_KEY);
+const stripe = require('stripe')(process.env.STRIPE_LIVE_SK_KEY);
 import { initializeApp } from "firebase/app";
 import { getFirestore,collection, addDoc } from 'firebase/firestore';
 

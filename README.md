@@ -20,13 +20,17 @@ npm install
 
 > Create a .env file in the project root directory with the following environment variables:
 
-STRIPE_SECRET_KEY=<your_stripe_secret_key>
-  
-FIREBASE_PROJECT_ID=<your_firebase_project_id>
-  
-FIREBASE_PRIVATE_KEY=<your_firebase_private_key>
-  
-FIREBASE_CLIENT_EMAIL=<your_firebase_client_email>
+NEXT_PUBLIC_LIVE_STRIPE_PB_KEY=live public stripe key
+
+NEXT_PUBLIC_TEST_STRIPE_PB_KEY = test public stripe key
+
+STRIPE_LIVE_SK_KEY=live secret stripe key
+
+STRIPE_TEST_SK_KEY=test secret stripe key
+
+FIREBASE_KEY = apikey
+
+FIREBASE_appid = appid
 
 npm run dev
 > Open http://localhost:3000 in your web browser to view the website.

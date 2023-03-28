@@ -28,7 +28,7 @@ export default async function handler(req, res) {
           line_items: [
             {
               // live price: 'price_1MpcMCSJau31s6BFwafyOZuD',
-              price: 'price_1Mpa97SJau31s6BFZmzJ3OBM',
+              price: 'price_1MpcMCSJau31s6BFwafyOZuD',
               quantity: 1,
             },
           ],

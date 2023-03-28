@@ -17,7 +17,7 @@ const privacypolicy = () => {
         </ol>
       
 Contact Us
-If you have any questions or concerns regarding our terms of service, please contact us at<a href = "mailto: controller.raniservers@gmail.com" className={styles.linktag} target="_blank">controller.raniservers@gmail.com</a>.
+If you have any questions or concerns regarding our terms of service, please contact us at <a href = "mailto: controller.raniservers@gmail.com" className={styles.linktag} target="_blank">controller.raniservers@gmail.com</a>.
 </div>
     </section>
     </>

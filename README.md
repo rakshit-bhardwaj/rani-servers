@@ -12,7 +12,7 @@ Mobile responsive design for the web app.
 
 ## Installation
 
-git clone https://github.com/<username>/rani-server.git
+git clone [https://github.com/<username>/rani-server.git]
   
 cd rani-server
   

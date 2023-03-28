@@ -13,14 +13,19 @@ Mobile responsive design for the web app.
 ## Installation
 
 git clone https://github.com/<username>/rani-server.git
+  
 cd rani-server
+  
 npm install
 
 > Create a .env file in the project root directory with the following environment variables:
 
 STRIPE_SECRET_KEY=<your_stripe_secret_key>
+  
 FIREBASE_PROJECT_ID=<your_firebase_project_id>
+  
 FIREBASE_PRIVATE_KEY=<your_firebase_private_key>
+  
 FIREBASE_CLIENT_EMAIL=<your_firebase_client_email>
 
 npm run dev

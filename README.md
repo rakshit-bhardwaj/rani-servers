@@ -1,38 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rani Server
+Rani Server is a CS:GO server hosting website that allows users to rent 128 tick servers with custom plugins like !ws, !knife, !gloves, and !agents that enable them to use any skin in the game. The servers are hosted on a t2.micro EC2 instance running Ubuntu and created using LinuxGSM.
 
-## Getting Started
+## Features
+Rent 128 tick CS:GO servers with custom plugins like !ws, !knife, !gloves, and !agents that enable users to use any skin in the game.
 
-First, run the development server:
+Secure payment processing with Stripe.
 
-```bash
+User authentication with Google Firestore to store Steam IDs.
+
+Mobile responsive design.
+
+## Installation
+
+git clone https://github.com/<username>/rani-server.git
+cd rani-server
+npm install
+
+> Create a .env file in the project root directory with the following environment variables:
+
+STRIPE_SECRET_KEY=<your_stripe_secret_key>
+FIREBASE_PROJECT_ID=<your_firebase_project_id>
+FIREBASE_PRIVATE_KEY=<your_firebase_private_key>
+FIREBASE_CLIENT_EMAIL=<your_firebase_client_email>
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+> Open http://localhost:3000 in your web browser to view the website.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
+Next.js: Next.js is a React framework that provides server-side rendering and automatic code splitting, among other benefits. It allows for faster page loads and a better user experience.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Stripe: Stripe is a payment processing platform that is used to handle payments on the website. Stripe is secure and provides a smooth checkout experience for customers.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Google Firestore: Google Firestore is a NoSQL document database that is used to store Steam IDs for users. Firestore provides real-time updates and automatic scaling, which makes it ideal for this project.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Vercel: Vercel is a cloud platform that is used to host the website. Vercel provides fast deployments, automatic SSL, and serverless functions, among other features.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+LinuxGSM: LinuxGSM is a command-line tool that is used to create and manage CS:GO servers on Linux servers. LinuxGSM simplifies server management by automating many of the tasks involved.
 
-## Learn More
+EC2: Amazon Elastic Compute Cloud (EC2) is a scalable cloud computing service that is used to host the CS:GO servers. EC2 provides resizable compute capacity, making it ideal for hosting game servers.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Advantages of Using These Technologies
+Next.js provides server-side rendering and automatic code splitting, which improves page load times and provides a better user experience. Additionally, it allows for easy integration with other React components and libraries.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Stripe is a secure and reliable payment processing platform that provides a smooth checkout experience for customers. It also offers features like fraud prevention and dispute resolution.
 
-## Deploy on Vercel
+Google Firestore provides real-time updates and automatic scaling, which makes it ideal for this project. Additionally, it offers seamless integration with other Google Cloud Platform services.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Vercel provides fast deployments, automatic SSL, and serverless functions, which simplifies hosting and deployment of the website. Additionally, it offers easy integration with other Vercel services like logging and monitoring.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+LinuxGSM simplifies server management by automating many of the tasks involved in creating and managing CS:GO servers. This saves time and reduces the likelihood of errors.
+
+EC2 provides resizable compute capacity, which makes it ideal for hosting game servers. Additionally, it offers a wide range of instance types to choose from, allowing for easy scalability.

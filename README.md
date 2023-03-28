@@ -1,5 +1,5 @@
 # Rani Server
-Rani Server is a CS:GO server hosting website that allows users to rent 128 tick servers with custom plugins like !ws, !knife, !gloves, and !agents that enable them to use any skin in the game. The servers are hosted on a t2.micro EC2 instance running Ubuntu and created using LinuxGSM.
+Rani Server is a CS:GO server hosting website that allows users to rent or buy VIP access to 128 tick servers with custom plugins like !ws, !knife, !gloves, and !agents that enable them to use any skin in the game. The servers are hosted on a t2.micro EC2 instance running Ubuntu and created using LinuxGSM.
 
 ## Features
 Rent 128 tick CS:GO servers with custom plugins like !ws, !knife, !gloves, and !agents that enable users to use any skin in the game.

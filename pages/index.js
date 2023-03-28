@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css'
 import { loadStripe } from '@stripe/stripe-js';
@@ -112,7 +113,11 @@ export default function Home() {
         </section>
 
         <div className={styles.code} style = {{'fontSize' : '0.7rem','position' : 'fixed','left' : '0px', 'bottom' : '0px'}}>
-          contact me through <a href = "mailto: controller.raniservers@gmail.com" className={styles.linktag} target="_blank"> Email </a> for hosting csgo tournaments and private scrims
+          contact me through <a href = "mailto: controller.raniservers@gmail.com" className={styles.linktag} target="_blank">Email</a> for hosting csgo tournaments and private scrims 
+          &nbsp;&nbsp;&nbsp;<Link href="/privacypolicy" style={{'textDecoration'
+          : 'underline'}}>Privacy Policy</Link>&nbsp;&nbsp;&nbsp;
+          <Link href="/termsofservice" style={{'textDecoration'
+          : 'underline'}}>Terms of Service</Link>
           </div>
         
         <ToastContainer />

@@ -4,12 +4,12 @@ import { getFirestore,collection, addDoc } from 'firebase/firestore';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAdB3oYEYPGwvjjaECaMVbNJWs6WGpvPYE",
+  apiKey: process.env.FIREBASE_APIKEY,
   authDomain: "rani-servers.firebaseapp.com",
   projectId: "rani-servers",
   storageBucket: "rani-servers.appspot.com",
   messagingSenderId: "937118940101",
-  appId: "1:937118940101:web:51b9191c3f7247e73f29ac",
+  appId: process.env.FIREBASE_APPID,
   measurementId: "G-BG8X076EJM"
 };
 

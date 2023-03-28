@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_TEST_STRIPE_PB_KEY);
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_LIVE_STRIPE_PB_KEY);
 
 export default function Home() {
   const router = useRouter();

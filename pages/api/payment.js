@@ -2,14 +2,15 @@ const stripe = require('stripe')(process.env.STRIPE_TEST_SK_KEY);
 import { initializeApp } from "firebase/app";
 import { getFirestore,collection, addDoc } from 'firebase/firestore';
 
-
+const apikey = process.FIREBASE_APIKEY;
+const appId = process.env.FIREBASE_APPID;
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_APIKEY,
+  apiKey: apikey,
   authDomain: "rani-servers.firebaseapp.com",
   projectId: "rani-servers",
   storageBucket: "rani-servers.appspot.com",
   messagingSenderId: "937118940101",
-  appId: process.env.FIREBASE_APPID,
+  appId: appId,
   measurementId: "G-BG8X076EJM"
 };
 

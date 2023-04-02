@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.STRIPE_TEST_SK_KEY);
+const stripe = require('stripe')(process.env.STRIPE_LIVE_SK_KEY);
 
 
 export default async function handler(req, res) {
@@ -11,8 +11,9 @@ export default async function handler(req, res) {
         const session = await stripe.checkout.sessions.create({
           line_items: [
             {
+               // test price : 'price_1Mpa97SJau31s6BFZmzJ3OBM',
               // live price: 'price_1MpcMCSJau31s6BFwafyOZuD',
-              price: 'price_1Mpa97SJau31s6BFZmzJ3OBM',
+              price: 'price_1MpcMCSJau31s6BFwafyOZuD',
               quantity: 1,
             },
           ],

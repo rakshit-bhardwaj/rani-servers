@@ -124,7 +124,7 @@ export default function Home() {
             <div className={styles.code}>
               <form style={{ 'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center' }} action="/api/payment" method="POST">
                 <label style={{ 'margin': '0.5rem','marginBottom' : '0.3rem' }}>Steam ID</label>
-                <p style={{"marginLeft":"0.5rem","marginRight":"0.5rem","fontSize":"0.75rem", "color" : "grey"}}>find your steamID at <a href="https://steamid.xyz/" style={{
+                <p style={{"marginLeft":"0.5rem","marginRight":"0.5rem","fontSize":"0.75rem", "color" : "grey"}}>find your steamID at <a href="https://steamid.xyz/" target="_blank"  style={{
             'textDecoration'
               : 'underline'
           }}>steamid.xyz</a></p>

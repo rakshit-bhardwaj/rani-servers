@@ -1,28 +1,54 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css'
 import { loadStripe } from '@stripe/stripe-js';
 import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_KEY,
+  authDomain: "rani-servers.firebaseapp.com",
+  projectId: "rani-servers",
+  storageBucket: "rani-servers.appspot.com",
+  messagingSenderId: "937118940101",
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
+  measurementId: "G-BG8X076EJM"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app)
+const dbi = collection(db, 'steamIDs');
+
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_TEST_STRIPE_PB_KEY);
 
 export default function Home() {
   const router = useRouter();
-  const { success, canceled } = router.query;
+  const { success, canceled, rsteamid } = router.query;
   const [steamID, setSteamID] = useState('');
 
-  
+
   useEffect(() => {
 
     if (success !== undefined || canceled !== undefined) {
       if (success) {
         console.log('Order placed! You will receive an email confirmation.');
         toast('Transaction successful !', { hideProgressBar: true, autoClose: 3000, type: 'success' })
+        try {
+          addDoc(dbi, {
+            steamID: rsteamid
+          })
+        } catch (e) {
+          console.log(e);
+        }
+
         setTimeout(() => {
           router.replace(router.pathname);
         }, 3000);
@@ -34,7 +60,7 @@ export default function Home() {
         setTimeout(() => {
           router.replace(router.pathname);
         }, 3000);
-        
+
       }
     }
 
@@ -62,27 +88,27 @@ export default function Home() {
 
         <section style={{ 'display': 'flex', 'flexDirection': 'row', 'justifyContent': 'center', 'marginTop': '3rem' }}>
           <div className={styles.code}>
-          128 tick servers !ws !knife !gloves !agents
+            128 tick servers !ws !knife !gloves !agents
           </div>
         </section>
-        <section style={{ 'marginTop': '3rem','display' : 'flex', 'flexDirection' : 'column'}}>
-          <div className ={styles.flexchange}>
-          <div className={styles.serverlabel} style = {{'marginBottom' : '1rem'}}>
-           pug server : 
+        <section style={{ 'marginTop': '3rem', 'display': 'flex', 'flexDirection': 'column' }}>
+          <div className={styles.flexchange}>
+            <div className={styles.serverlabel} style={{ 'marginBottom': '1rem' }}>
+              pug server :
+            </div>
+            <div className={styles.serverconnect} style={{ 'marginBottom': '1rem' }}>
+              connect 13.126.127.126:27015
+            </div>
           </div>
-          <div className={styles.serverconnect} style = {{'marginBottom' : '1rem'}}>
-            connect 13.126.127.126:27015
+          <div className={styles.flexchange}>
+            <div className={styles.serverlabel}>
+              deathmatch server :
+            </div>
+            <div className={styles.serverconnect} >
+              connect 3.109.24.192:27015
+            </div>
           </div>
-          </div>
-          <div className ={styles.flexchange}>
-          <div className={styles.serverlabel}>
-          deathmatch server :  
-          </div>
-          <div className={styles.serverconnect} >
-          connect 3.109.24.192:27015
-          </div>
-          </div>
-          
+
         </section>
         <section className={styles.midsection} >
           <section style={{ 'display': 'block', 'width': '300px', 'marginTop': '2rem' }}>
@@ -112,14 +138,18 @@ export default function Home() {
           </section>
         </section>
 
-        <div className={styles.code} style = {{'fontSize' : '0.7rem','position' : 'fixed','left' : '0px', 'bottom' : '0px'}}>
-          contact me through <a href = "mailto: controller.raniservers@gmail.com" className={styles.linktag} target="_blank">Email</a> for hosting csgo tournaments and private scrims 
-          &nbsp;&nbsp;&nbsp;<Link href="/privacypolicy" style={{'textDecoration'
-          : 'underline'}}>Privacy Policy</Link>&nbsp;&nbsp;&nbsp;
-          <Link href="/termsofservice" style={{'textDecoration'
-          : 'underline'}}>Terms of Service</Link>
-          </div>
-        
+        <div className={styles.code} style={{ 'fontSize': '0.7rem', 'position': 'fixed', 'left': '0px', 'bottom': '0px' }}>
+          contact me through <a href="mailto: controller.raniservers@gmail.com" className={styles.linktag} target="_blank">Email</a> for hosting csgo tournaments and private scrims
+          &nbsp;&nbsp;&nbsp;<Link href="/privacypolicy" style={{
+            'textDecoration'
+              : 'underline'
+          }}>Privacy Policy</Link>&nbsp;&nbsp;&nbsp;
+          <Link href="/termsofservice" style={{
+            'textDecoration'
+              : 'underline'
+          }}>Terms of Service</Link>
+        </div>
+
         <ToastContainer />
       </main>
 

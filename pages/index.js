@@ -27,7 +27,7 @@ const db = getFirestore(app)
 const dbi = collection(db, 'steamIDs');
 
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_TEST_STRIPE_PB_KEY);
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_LIVE_STRIPE_PB_KEY);
 
 export default function Home() {
   const router = useRouter();

@@ -50,4 +50,16 @@ LinuxGSM: LinuxGSM is a command-line tool that is used to create and manage CS:G
 
 EC2: Amazon Elastic Compute Cloud (EC2) is a scalable cloud computing service that is used to host the CS:GO servers. EC2 provides resizable compute capacity, making it ideal for hosting game servers.
 
+## software architecture 
+
+![rani-servers-design](https://user-images.githubusercontent.com/100684015/229371710-d7fdfc31-0e0b-4704-a26f-a11b405755a8.png)
+
+The CSGO servers can be accessed by the users via two methods, either by using the server's IP address or by utilizing the community server browser. The web application for Rani-servers has been developed using NextJS and is hosted on Vercel.
+
+In the event that a user decides to purchase VIP membership, it is mandatory for them to provide their Steam ID, which can be obtained from SteamIDfinder.xyz. Subsequently, the user needs to click on the "Pay Now" option, which invokes the backend API endpoint, payment.js. This API endpoint handles the Stripe API and redirects the user to the Stripe checkout page. If the payment process is successful, the returned value of "success=true" along with the Steam ID is recorded.
+
+The Steam ID is then added to the Firestore DB, and any new addition to the SteamID collection triggers a Firebase Cloud Function. This function, in turn, adds the new Steam ID to the local VIP list on the server using SFTP. Additionally, a cron job is set up to run at midnight every day, which automatically removes Steam IDs that are older than 30 days from both Firestore and the local VIP list.
+
+
+
 

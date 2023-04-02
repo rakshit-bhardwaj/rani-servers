@@ -51,15 +51,3 @@ LinuxGSM: LinuxGSM is a command-line tool that is used to create and manage CS:G
 EC2: Amazon Elastic Compute Cloud (EC2) is a scalable cloud computing service that is used to host the CS:GO servers. EC2 provides resizable compute capacity, making it ideal for hosting game servers.
 
 
-## Advantages of Using These Technologies
-Next.js provides server-side rendering and automatic code splitting, which improves page load times and provides a better user experience. Additionally, it allows for easy integration with other React components and libraries.
-
-Stripe is a secure and reliable payment processing platform that provides a smooth checkout experience for customers. It also offers features like fraud prevention and dispute resolution.
-
-Google Firestore provides real-time updates and automatic scaling, which makes it ideal for this project. Additionally, it offers seamless integration with other Google Cloud Platform services.
-
-Vercel provides fast deployments, automatic SSL, and serverless functions, which simplifies hosting and deployment of the website. Additionally, it offers easy integration with other Vercel services like logging and monitoring.
-
-LinuxGSM simplifies server management by automating many of the tasks involved in creating and managing CS:GO servers. This saves time and reduces the likelihood of errors.
-
-EC2 provides resizable compute capacity, which makes it ideal for hosting game servers. Additionally, it offers a wide range of instance types to choose from, allowing for easy scalability.

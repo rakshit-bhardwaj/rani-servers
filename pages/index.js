@@ -123,13 +123,17 @@ export default function Home() {
           <section style={{ 'display': 'block', 'width': '250px', 'marginTop': '2rem', 'marginLeft': '3rem' }}>
             <div className={styles.code}>
               <form style={{ 'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center' }} action="/api/payment" method="POST">
-                <label style={{ 'margin': '0.5rem' }}>Steam ID</label>
+                <label style={{ 'margin': '0.5rem','marginBottom' : '0.3rem' }}>Steam ID</label>
+                <p style={{"marginLeft":"0.5rem","marginRight":"0.5rem","fontSize":"0.75rem", "color" : "grey"}}>find your steamID at <a href="https://steamid.xyz/" style={{
+            'textDecoration'
+              : 'underline'
+          }}>steamid.xyz</a></p>
                 <input type="text"
                   id="steamid"
                   name="steamID"
                   value={steamID}
                   onChange={(e) => { setSteamID(e.target.value) }}
-                  style={{ 'margin': '0.5rem', 'padding': '0.5rem', 'border': '0', 'borderRadius': '0.317rem' }} placeholder='STEAM_X:Y:Z' required />
+                  style={{ 'margin': '0.5rem', 'padding': '0.5rem', 'border': '1px solid #0c0f12', 'borderRadius': '0.317rem' }} placeholder='STEAM_X:Y:Z' required />
 
                 <button type="submit" role='link' className={styles.button}>Pay now</button>
 

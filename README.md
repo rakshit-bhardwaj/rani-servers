@@ -52,7 +52,8 @@ EC2: Amazon Elastic Compute Cloud (EC2) is a scalable cloud computing service th
 
 ## software architecture 
 
-![rani-servers-design](https://user-images.githubusercontent.com/100684015/229371710-d7fdfc31-0e0b-4704-a26f-a11b405755a8.png)
+
+![rani-servers-system design drawio](https://user-images.githubusercontent.com/100684015/229692548-76e13219-dc4b-4a93-9160-e9e60e547afb.png)
 
 The CSGO servers can be accessed by the users via two methods, either by using the server's IP address or by utilizing the community server browser. The web application for Rani-servers has been developed using NextJS and is hosted on Vercel.
 

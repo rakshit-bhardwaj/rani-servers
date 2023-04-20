@@ -1,5 +1,5 @@
 # Rani Server
-Rani Server is a CS:GO server hosting website that allows users to rent or buy VIP access to 128 tick servers with custom plugins like !ws, !knife, !gloves, and !agents that enable them to use any skin in the game. The servers are hosted on a t2.micro EC2 instance running Ubuntu and created using LinuxGSM. The website is hosted on vercel.
+Rani Server is a CS:GO server hosting website that allows users to rent or buy VIP access to 128 tick servers with custom plugins like !ws, !knife, !gloves, and !agents that enable them to use any skin in the game. The servers are hosted on oracle's VM.Standard.E2.1.Micro instance [they were running on aws ec2 t2.micro instances before] running Ubuntu and created using LinuxGSM. The website is hosted on vercel.
 
 deployed website - https://rani-servers.vercel.app/
 

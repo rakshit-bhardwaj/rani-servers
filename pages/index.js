@@ -97,7 +97,7 @@ export default function Home() {
               pug server :
             </div>
             <div className={styles.serverconnect} style={{ 'marginBottom': '1rem' }}>
-              connect 13.126.127.126:27015
+              connect 140.238.226.172:27015
             </div>
           </div>
           <div className={styles.flexchange}>

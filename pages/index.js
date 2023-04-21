@@ -90,22 +90,21 @@ export default function Home() {
           <div className={styles.code}>
             128 tick servers !ws !knife !gloves !agents
           </div>
-        </section>
         <section style={{ 'marginTop': '3rem', 'display': 'flex', 'flexDirection': 'column' }}>
           <div className={styles.flexchange}>
             <div className={styles.serverlabel} style={{ 'marginBottom': '1rem' }}>
               pug server :
             </div>
             <div className={styles.serverconnect} style={{ 'marginBottom': '1rem' }}>
-              connect 140.238.226.172:27015
+              connect 141.148.210.70:27015
             </div>
           </div>
           <div className={styles.flexchange}>
             <div className={styles.serverlabel}>
-              deathmatch server :
+              1v1 server :
             </div>
             <div className={styles.serverconnect} >
-              connect 3.109.24.192:27015
+              connect 140.238.226.172:27015
             </div>
           </div>
 

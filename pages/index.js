@@ -90,6 +90,7 @@ export default function Home() {
           <div className={styles.code}>
             128 tick servers !ws !knife !gloves !agents
           </div>
+        </section>
         <section style={{ 'marginTop': '3rem', 'display': 'flex', 'flexDirection': 'column' }}>
           <div className={styles.flexchange}>
             <div className={styles.serverlabel} style={{ 'marginBottom': '1rem' }}>
